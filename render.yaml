@@ -1,0 +1,11 @@
+// filepath: /Users/hightowerkels/Documents/techspare_projects/benefitchain-frontend/render.yaml
+services:
+  - type: web
+    name: benefitchain-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
